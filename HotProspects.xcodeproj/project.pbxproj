@@ -15,6 +15,7 @@
 		D4AF823224D6BC080070DC43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4AF823024D6BC080070DC43 /* LaunchScreen.storyboard */; };
 		D4AF823C24D6BCBE0070DC43 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF823B24D6BCBE0070DC43 /* ProspectsView.swift */; };
 		D4AF823E24D6BCEB0070DC43 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF823D24D6BCEB0070DC43 /* MeView.swift */; };
+		D4AF824024D6C1C30070DC43 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF823F24D6C1C30070DC43 /* Prospect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D4AF823324D6BC080070DC43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4AF823B24D6BCBE0070DC43 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		D4AF823D24D6BCEB0070DC43 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		D4AF823F24D6C1C30070DC43 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D4AF822524D6BC070070DC43 /* AppDelegate.swift */,
 				D4AF822724D6BC070070DC43 /* SceneDelegate.swift */,
 				D4AF822924D6BC070070DC43 /* ContentView.swift */,
+				D4AF823F24D6C1C30070DC43 /* Prospect.swift */,
 				D4AF823B24D6BCBE0070DC43 /* ProspectsView.swift */,
 				D4AF823D24D6BCEB0070DC43 /* MeView.swift */,
 				D4AF822B24D6BC080070DC43 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4AF823C24D6BCBE0070DC43 /* ProspectsView.swift in Sources */,
+				D4AF824024D6C1C30070DC43 /* Prospect.swift in Sources */,
 				D4AF822624D6BC070070DC43 /* AppDelegate.swift in Sources */,
 				D4AF822824D6BC070070DC43 /* SceneDelegate.swift in Sources */,
 				D4AF822A24D6BC070070DC43 /* ContentView.swift in Sources */,
