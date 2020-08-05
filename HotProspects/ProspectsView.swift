@@ -47,8 +47,13 @@ struct ProspectsView: View {
             List {
                 ForEach(filteredProspects) { prospect in
                     VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
+                        HStack {
+                            if self.filter == .none {
+                                prospect.isContacted == true ? Image(systemName: "circle.fill") : Image(systemName: "circle")
+                            }
+                            Text(prospect.name)
+                                .font(.headline)
+                        }
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
                     }
@@ -64,12 +69,12 @@ struct ProspectsView: View {
                     }
                 }
             }            .navigationBarTitle(title)
-            .navigationBarItems(trailing: Button(action: {
-                self.isShowingScanner = true
-            }) {
-                Image(systemName: "qrcode.viewfinder")
-                Text("Scan")
-                }
+                .navigationBarItems(trailing: Button(action: {
+                    self.isShowingScanner = true
+                }) {
+                    Image(systemName: "qrcode.viewfinder")
+                    Text("Scan")
+                    }
             )
                 .sheet(isPresented: $isShowingScanner) {
                     CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: self.handleScan)
@@ -101,9 +106,9 @@ struct ProspectsView: View {
             content.subtitle = prospect.emailAddress
             content.sound = UNNotificationSound.default
             
-  //          var dateComponents = DateComponents()
-    //        dateComponents.hour = 9
-      //      let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            //          var dateComponents = DateComponents()
+            //        dateComponents.hour = 9
+            //      let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)  // use this for testing
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             
@@ -116,7 +121,7 @@ struct ProspectsView: View {
                 center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
                     if success {
                         addRequest()
-                     } else {
+                    } else {
                         print("Doh")
                     }
                 }
